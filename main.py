@@ -1,8 +1,5 @@
-mas = []
-for x in range(2, 10 ** 6):
-    if x % 2 > 0:
-        mas.append(x)
-import time
-b = time.time()
-print(mas)
-print(time.time() - b)
+s = input()
+smas = s.split()
+mas = [int(x) for x in smas]
+l = [x for x in mas if len(str(x)) % 2 != 0]
+print(l)
