@@ -1,6 +1,5 @@
 word = input()
 char = input()
-mas = dict()
 count = 0
 def f(word, char):
     if len(word) == 0:
