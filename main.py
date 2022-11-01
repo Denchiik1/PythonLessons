@@ -1,15 +1,8 @@
-mas = dict()
-def fib(n):
-    if n < 3:
-        return 1
-    else:
-        if n in mas:
-            return mas[n]
-        else:
-            f = fib(n - 1) + fib(n - 2)
-            mas[n] = f
-            return f
+mas = []
+for x in range(2, 10 ** 6):
+    if x % 2 > 0:
+        mas.append(x)
 import time
 b = time.time()
-print(fib(5))
+print(mas)
 print(time.time() - b)
