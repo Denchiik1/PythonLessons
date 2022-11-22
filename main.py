@@ -1,4 +1,5 @@
-s = '12345'
+s1 = '123456'
+s = s1
 l = 1
 for i in range(0, len(s) - (l -1)):
     print(s[i: i + l])
