@@ -1,11 +1,12 @@
-s = input()
-def f(s):
-    m = set()
-    for x in s:
-        m.add(x)
-    for i in s:
-        if s.count(i) > len(m):
-            return False
-        else:
-            return True
-print(f(s))
+s = '12345'
+l = 1
+for i in range(0, len(s) - (l -1)):
+    print(s[i: i + l])
+for i in range(0, len(s) - l):
+    print(s[i: i+ (l + 1)])
+for i in range(0,  len(s) - (l + 1)):
+    print(s[i: i + (l + 2)])
+for i in range(0, len(s) - (l + 2)):
+    print(s[i: i + (l + 3)])
+for i in range(0, len(s) - (l + 3)):
+    print(s[i: i + (l + 4)])

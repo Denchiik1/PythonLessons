@@ -1,5 +1,6 @@
-mas = [x for x in range(2, 10 ** 3) if x % 14 == 0]
-import time
-b = time.time()
+s = input()
+smas = s.split()
+mas = [int(x) for x in smas]
+l = [str(x) + str(x) for x in mas if len(str(x)) == 2]
+mas = [int(x) for x in l]
 print(mas)
-print(time.time() - b)
