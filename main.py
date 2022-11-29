@@ -1,13 +1,7 @@
-s1 = open("C:\\Users\\danya\\OneDrive\\Изображения\\Telegram\\inf24.txt")
-s = s1.readlines()
-s1.close()
-l = []
-k = 0
-for j in s:
-    l.append(j.count("G"))
-m = l[0]
-for i in range(len(l)):
-    if l[i] > m:
-        m = l[i]
-        k = i
-print(s[k])
+for a in range(174457, 174505):
+    e = []
+    for i in range(2, a):
+        if a % i == 0:
+            e.append(i)
+    if len(e) == 2:
+        print(e[0], e[1], sep='  ')
