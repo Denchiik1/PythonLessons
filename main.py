@@ -1,4 +1,4 @@
-f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\25.txt")
+f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\24.txt")
 s = f.readlines()
 f.close()
 d = s[0].split()
