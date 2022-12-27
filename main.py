@@ -1,14 +1,19 @@
-f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\Питон\\Programm2.txt")
-s = f.readlines()
+f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\Питон\\Programm3.txt")
+s = f.read()
 f.close()
 l = []
-for x in s:
-    a = x.split()
-    if a[2] == "1":
-        l.append(a[0])
-        l.append(a[1])
-summa = 0
-for i in range(0, len(l), 2):
-        t = int(l[i]) * int(l[i + 1])
-        summa += t
-print(summa)
+srednee_arif_count = 0
+srednee_arif = 0
+diometr = 1
+diometr_count = 0
+a = s.split()
+for x in a:
+    l.append(int(x))
+for i in l:
+    srednee_arif += i
+    srednee_arif_count += 1
+print(srednee_arif / srednee_arif_count)
+for j in l:
+    diometr *= j
+    diometr_count += 1
+print(diometr ** (1 / diometr_count))
