@@ -7,5 +7,5 @@ for x in s:
     a = x.split()
     l.append(a)
 for i in l:
-    if int(i[0]) >= 1 and int(i[1]) >= 1:
+    if (int(i[0]) >= 1 and int(i[1]) >= 1) or (int(i[0]) <= -1 and int(i[1]) <= -1):
         print(i[0], i[1])
