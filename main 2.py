@@ -1,6 +1,2 @@
-s = input()
-smas = s.split()
-mas = [int(x) for x in smas]
-l = [str(x) + str(x) for x in mas if len(str(x)) == 2]
-mas = [int(x) for x in l]
-print(mas)
+a = 0
+print(a + 50 + 50 + 300 + 80 + 350 + 100)
