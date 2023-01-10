@@ -7,5 +7,5 @@ for x in s:
     a = x.split()
     l.append(a)
 for i in l:
-    if int(i[0]) * int(i[1]) >= 0:
-        print(i[0], i[1])
+    if int(i[0]) * int(i[1]) > 0:
+        print("Координата находится в первой или третьей координатных четвертях", i[0], i[1])
