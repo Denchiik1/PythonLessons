@@ -1,11 +1,7 @@
-f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\Питон\\Programm4.txt")
-s = f.readlines()
-f.close()
-l = []
-a = 0
-for x in s:
-    a = x.split()
-    l.append(a)
-for i in l:
-    if int(i[0]) * int(i[1]) > 0:
-        print("Координата находится в первой или третьей координатных четвертях", i[0], i[1])
+R = 5
+n = 0
+for x in range(-4, 5):
+    for y in range(-4, 5):
+        if x ** 2 + y ** 2 < R ** 2:
+            n += 1
+            print(x, y, n)
