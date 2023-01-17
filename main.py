@@ -1,17 +1,12 @@
-n = 0
-k1 = 1.5
-b1 = 0
-b2 = 4.5
-k2 = -0.75
+from math import sqrt
 count = 0
-for x in range(1, 3):
-    for y in range(1, 3):
-        if k1 * x + b1 > y:
-            print(x, y)
-            count += 1
-for x in range(3, 6):
-    for y in range(1, 3):
-        if k2 * x + b2 > y:
-            print(x, y)
+b1 = 10
+k1 = -1 / sqrt(3)
+b2 = 0
+k2 = 1 / sqrt(3)
+tyash_chislo = (10 * sqrt(3)) / 2
+for x in range(1, 809):
+    for y in range(1, 10):
+        if y > k2 * x + b2 and y < k1 * x + b1:
             count += 1
 print(count)
