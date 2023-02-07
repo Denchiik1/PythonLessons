@@ -1,10 +1,7 @@
-x = 343 ** 5 + 343 ** 4 + 49 ** 6 - 7 ** 13 - 21
-l = []
-schetchik = 0
-chw = []
-while x > 0:
-    a = x % 7
-    x = x // 7
-    l.append(a)
-s = set(l)
-print(len(s))
+s = '9' * 85
+while ('666' in s) or ('999' in s):
+    if '666' in s:
+        s = s.replace('666', '9', 1)
+    else:
+        s = s.replace('999', '6', 1)
+print(s)
