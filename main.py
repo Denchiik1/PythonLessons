@@ -1,8 +1,13 @@
-def F(n):
-    if n == 1:
-        return 1
-    elif n == 2:
-        return 3
-    elif n > 2:
-        return F(n - 1) * n + F(n - 2) * (n - 1)
-print(F(5))
+f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\Питон\\24_demo.txt")
+s = f.read()
+f.close()
+count = 0
+m = 0
+k = 1
+for x in range(1, len(s) - 1):
+    if s[x] != s[x + 1]:
+        k += 1
+    else:
+        m = max(k, m)
+        k = 1
+print(m)
