@@ -1,7 +1,9 @@
-for n in range(174457, 174505):
+position = 1
+for n in range(5, 9):
     l = []
     for delit in range(2, n):
         if n % delit == 0:
             l.append(delit)
-    if len(l) == 2:
-            print(l[0], l[1])
+    if len(l) == 0:
+        print(position, n)
+    position += 1
