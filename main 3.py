@@ -1,7 +1,13 @@
-for n in range(110203, 110246):
-    l = []
-    for delit in range(2, n + 1, 2):
+for n in range(2_000_000, 3_000_000):
+    razn = []
+    count = 0
+    for delit in range(1, int(n ** 0.5) + 1):
         if n % delit == 0:
-            l.append(delit)
-    if len(l) == 4:
-        print(l[0], l[1], l[2], l[3])
+            x = delit
+            y = n // delit
+            d = abs(x - y)
+            if x <= y and d <= 115:
+                razn.append(d)
+                count += 1
+    if count > 2:
+        print(n)
