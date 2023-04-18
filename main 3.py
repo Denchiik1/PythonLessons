@@ -1,13 +1,23 @@
-for n in range(2_000_000, 3_000_000):
-    razn = []
-    count = 0
-    for delit in range(1, int(n ** 0.5) + 1):
-        if n % delit == 0:
-            x = delit
-            y = n // delit
-            d = abs(x - y)
-            if x <= y and d <= 115:
-                razn.append(d)
-                count += 1
-    if count > 2:
-        print(n)
+import math
+def f(n):
+    return []
+def f(N):
+    a = 0
+    ret = [[N]]
+    if N == 1:
+        return ret
+    for i in range(1, N):
+        n = N - i
+        l = f(n)
+        for x in l:
+            x.append(i)
+        ret = ret + l
+    return ret
+m = f(16)
+index = 0
+maxp = 0
+for i in range(len(m)):
+    if math.prod(m[i]) >= maxp:
+        index = i
+        maxp= math.prod(m[i])
+print(m[index])
