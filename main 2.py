@@ -1,9 +1,20 @@
-position = 1
-for n in range(5, 9):
-    l = []
-    for delit in range(2, n):
-        if n % delit == 0:
-            l.append(delit)
-    if len(l) == 0:
-        print(position, n)
-    position += 1
+n = 0
+r = 1
+while r <= 114:
+    n += 1
+    r = bin(n)[2:]
+    r += r[-1]
+    if r.count("1") % 2 == 0:
+        r += "0"
+        if r.count("1") % 2 == 0:
+            r += "0"
+        else:
+            r += "1"
+    else:
+        r += "1"
+        if r.count("1") % 2 == 0:
+            r += "0"
+        else:
+            r += "1"
+    r = int(r, 2)
+print(r)
