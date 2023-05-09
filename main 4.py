@@ -1,8 +1,12 @@
-f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\Питон\\inf_22_10_20_24.txt")
-s = f.readlines()
-f.close()
-k = 0
-for x in s:
-    if x.count("E") > x.count("A"):
-        k += 1
-print(k)
+minimum = 0
+N = 1
+R = 1
+while R != 120 and R <= 120:
+    R = bin(N)[2:]
+    if N % 3 == 0:
+        R += R[-3:]
+    else:
+        R += bin(N % 3 * 3)[2:]
+    R = int(R, 2)
+    N += 1
+print(N - 1)
