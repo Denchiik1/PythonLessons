@@ -1,23 +1,11 @@
-import math
-def f(n):
-    return []
-def f(N):
-    a = 0
-    ret = [[N]]
-    if N == 1:
-        return ret
-    for i in range(1, N):
-        n = N - i
-        l = f(n)
-        for x in l:
-            x.append(i)
-        ret = ret + l
-    return ret
-m = f(16)
-index = 0
-maxp = 0
-for i in range(len(m)):
-    if math.prod(m[i]) >= maxp:
-        index = i
-        maxp= math.prod(m[i])
-print(m[index])
+n = 0
+r = 1
+maximum = 0
+while n <= 1000:
+    n += 1
+    r = bin(n)[2:]
+    r = r[::-1]
+    r = int(r, 2)
+    if r == 23 and n > maximum:
+        maximum = n
+print(maximum)
