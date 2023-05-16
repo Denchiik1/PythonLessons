@@ -1,13 +1,17 @@
-n = 0
-r = 1
-while r <= 68:
-    n += 1
-    r = bin(n)[2:]
-    if r.count("1") % 2 == 0:
-        r += "0"
-        r = "101" + r[3:]
-    else:
-        r += "11"
-        r = "10" + r[2:]
-    r = int(r, 2)
-print(n)
+f = open("C:\\Users\\danya\\OneDrive\\Рабочий стол\\abapol.csv", encoding='utf8')
+s = f.readlines()[1:]
+f.close()
+l = []
+t1 = 0
+arif = 0
+kol_vo = 0
+for x in s:
+    l.append([int(y) for y in x.split(';')[2:]])
+for x in l:
+    if x[1] == 5 and (x[2] < 4 and x[2] != 0) and (x[3] < 4 and x[3] != 0):
+        t1 += 1
+    if x[0] == 5 and x[3] != 0:
+        arif += x[3]
+        kol_vo += 1
+print(t1)
+print(round(arif/kol_vo, 2))
