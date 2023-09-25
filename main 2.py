@@ -1,20 +1,9 @@
-n = 0
-r = 1
-while r <= 114:
-    n += 1
-    r = bin(n)[2:]
-    r += r[-1]
-    if r.count("1") % 2 == 0:
-        r += "0"
-        if r.count("1") % 2 == 0:
-            r += "0"
-        else:
-            r += "1"
-    else:
-        r += "1"
-        if r.count("1") % 2 == 0:
-            r += "0"
-        else:
-            r += "1"
-    r = int(r, 2)
-print(r)
+def f(x, y, z):
+    x1 = int(str(x), y)
+    s = ""
+    while x1 > 0:
+        c = str(x1 % z)
+        s = c + s
+        x1 = x1 // z
+    return s
+print(f(250, 8, 3))
