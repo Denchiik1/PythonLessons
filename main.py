@@ -1,19 +1,13 @@
-a = 250
-s = ""
-while a > 0:
-    c = str(a % 16)
-    if c == '10':
-        c = 'A'
-    elif c == '11':
-        c = 'B'
-    elif c == '12':
-        c = 'C'
-    elif c == '13':
-        c = 'D'
-    elif c == '14':
-        c = 'E'
-    elif c == '15':
-        c = 'F'
-    s = c + s
-    a = a // 16
-print(s)
+import time
+b = time.time()
+k = 10000
+a_prev = 1
+S = a_prev
+a_next = 0
+for x in range(2, k + 1):
+    a_next = a_prev / x
+    S += a_next
+    a_prev = a_next
+l = time.time()
+print(S)
+print(l-b)
