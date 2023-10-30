@@ -1,13 +1,13 @@
-import time
-b = time.time()
-k = 10000
-a_prev = 1
-S = a_prev
-a_next = 0
-for x in range(2, k + 1):
-    a_next = a_prev / x
-    S += a_next
-    a_prev = a_next
-l = time.time()
-print(S)
-print(l-b)
+l = "123"
+def permut(l):
+    ret = []
+    if len(l) == 1:
+        return l
+    for i in range(len(l)):
+        a = l[i]
+        s = l[:i] + l[i+1:]
+        r = permut(s)
+        for x in r:
+            ret.append(a + x)
+    return ret
+print(permut(l))
